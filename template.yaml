@@ -75,7 +75,7 @@ Resources:
     Metadata:
       BuildMethod: makefile
     Properties:
-      FunctionName: !Sub "${AWS::StackName}-laravel-${env}"
+      FunctionName: !Sub "${AWS::StackName}-laravel"
       Runtime: provided.al2
       Layers:
         # bref runtimes: https://runtimes.bref.sh
@@ -119,7 +119,7 @@ Resources:
     Metadata:
       BuildMethod: makefile
     Properties:
-      FunctionName: !Sub "${AWS::StackName}-artisan-${env}"
+      FunctionName: !Sub "${AWS::StackName}-artisan"
       Runtime: provided.al2
       Layers:
         # bref runtimes: https://runtimes.bref.sh
@@ -177,7 +177,7 @@ Resources:
   worker:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub "${AWS::StackName}-worker-${env}"
+      FunctionName: !Sub "${AWS::StackName}-worker"
       CodeUri: worker
       Handler: index.handler
       Runtime: nodejs14.x
@@ -208,7 +208,7 @@ Resources:
     Metadata:
       BuildMethod: makefile
     Properties:
-      FunctionName: !Sub "${AWS::StackName}-handler-${env}"
+      FunctionName: !Sub "${AWS::StackName}-handler"
       Runtime: provided.al2
       Layers:
         # bref runtimes: https://runtimes.bref.sh
